@@ -64,7 +64,7 @@ export default function MarqueeTicker({
     <div className={`overflow-hidden ${className}`}>
       <div ref={trackRef} className="flex items-center whitespace-nowrap will-change-transform">
         {doubled.map((item, i) => (
-          <span key={i} className={`flex items-center gap-4 px-4 ${itemClassName}`}>
+          <span key={`${item}-${i}`} className={`flex items-center gap-4 px-4 ${itemClassName}`}>
             <span>{item}</span>
             <span className="text-vintage-amber opacity-60">{separator}</span>
           </span>

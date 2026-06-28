@@ -90,8 +90,7 @@ export default function HeroSection() {
 
       {/* Watermark */}
       <div
-        className="absolute right-0 top-0 vertical-text font-cinzel font-black opacity-10 select-none overflow-hidden text-vintage-amber pointer-events-none"
-        style={{ fontSize: 'clamp(5rem,12vw,9rem)', lineHeight: 1 }}
+        className="absolute right-0 top-0 vertical-text font-cinzel font-black opacity-10 select-none overflow-hidden text-vintage-amber pointer-events-none text-[clamp(5rem,12vw,9rem)] leading-none"
         aria-hidden
       >
         HERITAGE
@@ -106,8 +105,7 @@ export default function HeroSection() {
         {/* Main Headline — SplitText character reveal */}
         <h1
           ref={headlineRef}
-          className="font-cinzel font-black uppercase mb-10 leading-none flex flex-col gap-3"
-          style={{ fontSize: 'clamp(3rem,8vw,5rem)', perspective: '800px' }}
+          className="font-cinzel font-black uppercase mb-10 leading-none flex flex-col gap-3 text-[clamp(3rem,8vw,5rem)] [perspective:800px]"
         >
           <span className="block overflow-hidden py-1">
             <span

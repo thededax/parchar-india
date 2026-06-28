@@ -120,13 +120,13 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-vintage-amber flex-shrink-0" />
-                <a href={`tel:${BRAND.phone}`} className="font-lato text-vintage-cream/70 hover:text-vintage-amber text-sm transition-colors">
+                <a href={`tel:${BRAND.phone}`} aria-label="Call Parchar India" className="font-lato text-vintage-cream/70 hover:text-vintage-amber text-sm transition-colors">
                   {BRAND.phone}
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={16} className="text-vintage-amber flex-shrink-0" />
-                <a href={`mailto:${BRAND.email}`} className="font-lato text-vintage-cream/70 hover:text-vintage-amber text-sm transition-colors">
+                <a href={`mailto:${BRAND.email}`} aria-label="Email Parchar India" className="font-lato text-vintage-cream/70 hover:text-vintage-amber text-sm transition-colors">
                   {BRAND.email}
                 </a>
               </li>

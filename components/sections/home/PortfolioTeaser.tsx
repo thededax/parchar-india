@@ -89,7 +89,7 @@ export default function PortfolioTeaser() {
             {/* Background */}
             <div
               className="absolute inset-0 bg-halftone-maroon transition-transform duration-700 group-hover:scale-110"
-              style={{ backgroundColor: CARD_COLORS[i], opacity: 0.9 }}
+              style={{ backgroundColor: CARD_COLORS[i % CARD_COLORS.length], opacity: 0.9 }}
             />
 
             {/* Portfolio overlay */}

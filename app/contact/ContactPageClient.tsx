@@ -108,6 +108,7 @@ export default function ContactPageClient() {
     try {
       const formData = new URLSearchParams()
       formData.append('form-name', 'contact')
+      formData.append('bot-field', '')
       Object.entries(form).forEach(([key, value]) => formData.append(key, value))
 
       await fetch('/', {
@@ -297,13 +298,15 @@ export default function ContactPageClient() {
                 </h2>
 
                 {/* Netlify Forms hidden form */}
-                <form name="contact" data-netlify="true" hidden>
-                  <input type="text" name="name" />
-                  <input type="email" name="email" />
+                <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+                  <input type="hidden" name="form-name" value="contact" />
+                  <input type="hidden" name="bot-field" />
+                  <input type="text" name="name" required />
+                  <input type="email" name="email" required />
                   <input type="tel" name="phone" />
                   <select name="service"><option></option></select>
                   <select name="budget"><option></option></select>
-                  <textarea name="message"></textarea>
+                  <textarea name="message" required></textarea>
                 </form>
 
                 <div ref={stepsContainerRef} className="relative overflow-hidden" style={{ minHeight: '320px' }}>
