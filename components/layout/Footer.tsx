@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react'
 import { gsap, ScrollTrigger } from '@/lib/gsap'
 import { NAV_LINKS, BRAND } from '@/constants/content'
 import OrnamentalDivider from '@/components/ui/OrnamentalDivider'
-import { Instagram, Facebook, Youtube, Phone, Mail, MapPin } from 'lucide-react'
+import { Instagram, Facebook, Linkedin, Phone, Mail, MapPin } from 'lucide-react'
 
 export default function Footer() {
   const footerRef = useRef<HTMLElement>(null)
@@ -55,9 +55,9 @@ export default function Footer() {
             {/* Social icons */}
             <div className="flex gap-3">
               {[
-                { icon: Instagram, label: 'Instagram', href: '#' },
-                { icon: Facebook,  label: 'Facebook',  href: '#' },
-                { icon: Youtube,   label: 'YouTube',   href: '#' },
+                { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/parcharindia' },
+                { icon: Facebook,  label: 'Facebook',  href: 'https://www.facebook.com/parcharindia' },
+                { icon: Linkedin,  label: 'LinkedIn',  href: 'https://www.linkedin.com/company/parcharindia' },
               ].map(({ icon: Icon, label, href }) => (
                 <a
                   key={label}

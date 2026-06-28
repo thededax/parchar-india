@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://parcharindia.com/sitemap.xml',
+    sitemap: 'https://parchar-india.netlify.app/sitemap.xml',
   }
 }

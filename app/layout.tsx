@@ -9,6 +9,7 @@ import ScrollProgress from '@/components/ui/ScrollProgress'
 import FloatingWhatsApp from '@/components/ui/FloatingWhatsApp'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://parchar-india.netlify.app'),
   title: 'Parchar India — Timeless Messages. Lasting Impact.',
   description:
     'Parchar India is a full-service marketing and social media agency in Bhagalpur, Bihar. We help Indian businesses communicate powerfully, build iconic brands, and grow faster.',
@@ -27,11 +28,20 @@ export const metadata: Metadata = {
     description: 'Full-service marketing & social media agency for Indian businesses.',
     type: 'website',
     locale: 'en_IN',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Parchar India — Timeless Messages. Lasting Impact.',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Parchar India — Timeless Messages. Lasting Impact.',
     description: 'Full-service marketing & social media agency for Indian businesses.',
+    images: ['/og-image.png'],
   },
 }
 

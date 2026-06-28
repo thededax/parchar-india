@@ -11,7 +11,7 @@ export const BRAND = {
   phone: '+91 9279483979',
   whatsapp: '+919279483979',
   email: 'hello@parcharindia.com',
-  website: 'https://parcharindia.com',
+  website: 'https://parchar-india.netlify.app',
 }
 
 export const NAV_LINKS = [

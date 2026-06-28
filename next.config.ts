@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
   },
   compress: true,
   poweredByHeader: false,
+  optimizeFonts: false,
 }
 
 export default nextConfig

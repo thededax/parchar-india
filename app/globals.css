@@ -300,3 +300,194 @@ html.lenis {
   z-index: -1;
   border: 2px solid var(--color-maroon);
 }
+
+/* ═══════════════════════════════════
+   MARQUEE TESTIMONIALS
+   ═══════════════════════════════════ */
+@keyframes marquee-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes marquee-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+.marquee-left {
+  animation: marquee-left 30s linear infinite;
+}
+.marquee-right {
+  animation: marquee-right 30s linear infinite;
+}
+.marquee-track:hover .marquee-left,
+.marquee-track:hover .marquee-right {
+  animation-play-state: paused;
+}
+
+/* ═══════════════════════════════════
+   PULSE SLOW (WhatsApp-style)
+   ═══════════════════════════════════ */
+@keyframes pulse-slow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  50% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+}
+.animate-pulse-slow {
+  animation: pulse-slow 2.5s ease infinite;
+}
+
+/* ═══════════════════════════════════
+   PORTFOLIO CARD GRADIENTS
+   ═══════════════════════════════════ */
+.card-kumar-electronics {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+.card-priya-boutique {
+  background: linear-gradient(135deg, #2d1b69 0%, #11998e 100%);
+}
+.card-singh-construction {
+  background: linear-gradient(135deg, #373B44 0%, #4286f4 100%);
+}
+.card-bhagalpur-sweets {
+  background: linear-gradient(135deg, #c94b4b 0%, #4b134f 100%);
+}
+.card-bihar-travel {
+  background: linear-gradient(135deg, #134e5e 0%, #71b280 100%);
+}
+
+/* ═══════════════════════════════════
+   FAQ ACCORDION
+   ═══════════════════════════════════ */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.faq-answer.open {
+  max-height: 400px;
+}
+
+/* ═══════════════════════════════════
+   TIMELINE DRAWING
+   ═══════════════════════════════════ */
+.timeline-line-draw {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+/* ═══════════════════════════════════
+   GOLD BORDER DRAW (Service Cards)
+   ═══════════════════════════════════ */
+@keyframes border-draw {
+  0% { clip-path: inset(0 100% 100% 0); }
+  25% { clip-path: inset(0 0 100% 0); }
+  50% { clip-path: inset(0 0 0 0); }
+  75% { clip-path: inset(0 0 0 0); }
+  100% { clip-path: inset(0 0 0 0); }
+}
+.gold-border-draw {
+  position: absolute;
+  inset: -2px;
+  border: 2px solid var(--color-amber);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.group:hover .gold-border-draw {
+  opacity: 1;
+  animation: border-draw 0.6s ease forwards;
+}
+
+/* ═══════════════════════════════════
+   WORD REVEAL (About Page)
+   ═══════════════════════════════════ */
+.word-reveal-dim {
+  opacity: 0.15;
+  transition: opacity 0.1s ease;
+}
+
+/* ═══════════════════════════════════
+   WIZARD STEPS
+   ═══════════════════════════════════ */
+.wizard-step {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* ═══════════════════════════════════
+   PINNED SECTION
+   ═══════════════════════════════════ */
+.pin-spacer {
+  will-change: transform;
+}
+
+/* ═══════════════════════════════════
+   RESPONSE BADGE
+   ═══════════════════════════════════ */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.5); }
+}
+.pulse-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #25D366;
+  animation: pulse-dot 2s ease infinite;
+}
+
+/* ═══════════════════════════════════
+   HORIZONTAL SCROLL PORTFOLIO
+   ═══════════════════════════════════ */
+.portfolio-h-card {
+  flex-shrink: 0;
+  width: 75vw;
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .portfolio-h-card {
+    width: 90vw;
+    height: 70vh;
+  }
+}
+
+/* Grain overlay on hover */
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.12'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 2;
+}
+.portfolio-h-card:hover .grain-overlay {
+  opacity: 1;
+}
+
+/* ═══════════════════════════════════
+   PRICING TOGGLE
+   ═══════════════════════════════════ */
+.pricing-toggle {
+  position: relative;
+  display: inline-flex;
+  background: var(--color-cream-deep);
+  border: 3px solid var(--color-maroon);
+  padding: 4px;
+}
+.pricing-toggle-pill {
+  position: absolute;
+  top: 4px;
+  height: calc(100% - 8px);
+  width: 50%;
+  background: var(--color-maroon);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.pricing-toggle-pill.annual {
+  transform: translateX(100%);
+}
+

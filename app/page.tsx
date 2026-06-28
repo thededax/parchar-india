@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: 'Parchar India — Timeless Messages. Lasting Impact.',
   description:
     'Parchar India is Bhagalpur\'s premier full-service marketing and social media agency. We craft campaigns that move Indian consumers and build iconic brands.',
-  alternates: { canonical: 'https://parcharindia.com' },
+  alternates: { canonical: 'https://parchar-india.netlify.app' },
 }
 
 export default function HomePage() {

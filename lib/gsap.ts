@@ -1,12 +1,14 @@
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
+import { TextPlugin } from 'gsap/TextPlugin'
 import { CustomEase } from 'gsap/CustomEase'
 
 // DrawSVGPlugin requires Club GreenSock license — we use a CSS-based fallback
-// SplitText is available in GSAP free tier via gsap/SplitText
+// SplitText is available as our custom splitText utility in lib/splitText.ts
 
 if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger, CustomEase)
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, TextPlugin, CustomEase)
 
   // Custom eases matching Parchar India's heritage-premium feel
   CustomEase.create('parchar.reveal',  '0.16, 1, 0.3, 1')    // Smooth, confident
@@ -25,4 +27,4 @@ if (typeof window !== 'undefined') {
   })
 }
 
-export { gsap, ScrollTrigger, CustomEase }
+export { gsap, ScrollTrigger, ScrollToPlugin, TextPlugin, CustomEase }
